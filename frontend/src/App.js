@@ -5,13 +5,15 @@ import NotFound from "./components/NotFound";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import Layout from "./components/Layout";
 import theme from "./components/theme";
+import Homepage from "./pages/Homepage";
 
 const App = () => (
   <MuiThemeProvider theme={theme}>
     <Router>
       <Layout>
         <Switch>
-          <Route path="/" exact={true} component={Phonebook} />
+          <Route path="/" exact={true} component={Homepage} />
+          <Route path="/phonebook" component={Phonebook} />
           <Route component={NotFound} />
         </Switch>
       </Layout>
