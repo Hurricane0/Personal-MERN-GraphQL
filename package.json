@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js",
-    "frontend": "npm run start --prefix frontend",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
+    "postinstall": "npm --prefix frontend install",
+    "build": "npm --prefix frontend run build",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
